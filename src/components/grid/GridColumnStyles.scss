@@ -1,0 +1,40 @@
+$rtrb-grid-gutter-width: 5px !default;
+.rtrb-grid-col {
+    // overflow-y: auto;
+    &.rtrb-halign-left {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &.rtrb-halign-center {
+        display: flex;
+        justify-content: center;
+    }
+
+    &.rtrb-halign-right {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &.rtrb-valign-middle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &.rtrb-valign-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > * {
+            align-self: flex-start;
+        }
+    }
+    &.rtrb-valign-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > * {
+            align-self: flex-end;
+        }
+    }
+}

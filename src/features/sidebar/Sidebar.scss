@@ -1,0 +1,9 @@
+$sidebar-background-color : #F3F2F1;
+
+.sidebar {
+    background-color: $sidebar-background-color;
+
+    .bp3-tree-node {
+        cursor: pointer;
+    }
+}

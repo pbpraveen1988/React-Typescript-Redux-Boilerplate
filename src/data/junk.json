@@ -1,0 +1,20 @@
+[
+    {
+        "mId": "guid-3",
+        "from": "Outlook Team",
+        "unread": true,
+        "subject": "JUNK Training Program",
+        "time": "27/12/2018 10.53 PM",
+        "folder":"junk",
+        "content": "About Microsoft Virtual Academy<br/>Microsoft Virtual Academy provides free online training by world-class experts to help you build your technical skills and advance your career. Make it your destination of choice to get started on the latest Microsoft technologies and join this vibrant community."
+    },
+    {
+        "mId": "guid-3",
+        "unread": false,
+        "from": "Outlook Team",
+        "subject": "JUNK Empower your future",
+        "time": "25/12/2018 10.53 PM",
+        "folder":"junk",
+        "content": "We foster our pipeline of future leaders with 47 employee networks and 7 global employee resource groups, servicing an active community of thousands across Microsoft"
+    }
+]

@@ -2,9 +2,10 @@
     "compileOnSave": true,
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
-     
+        "experimentalDecorators": true,
         "declaration": true,
         "baseUrl": "./src",
+        "resolveJsonModule": true,
         "outDir": "./dist",
         "sourceMap": true,
         "noImplicitAny": true,

@@ -1,0 +1,214 @@
+$rtrb-grid-gutter-width: 5px !default;
+
+.rtrb-grid {
+    //Grid level mumber of columns from 1-12. This sets appropriate
+    //width for each of the grid column. In this more, rows are not required
+    @mixin column-width($width) {
+        width: $width;
+        // max-width: $width;
+    }
+
+    @mixin column-width-gutter($width) {
+        width: calc(#{$width} - #{$rtrb-grid-gutter-width * 2});
+        // max-width: calc(#{$width} - #{$rtrb-grid-gutter-width * 2});
+    }
+
+    &.rtrb-grid-cols-1 > .rtrb-grid-col, > .rtrb-grid-row.rtrb-grid-cols-1 > .rtrb-grid-col  {
+        @include column-width(100%);
+    }
+
+    &.rtrb-grid-cols-2 > .rtrb-grid-col, > .rtrb-grid-row.rtrb-grid-cols-2 > .rtrb-grid-col {
+        @include column-width(50%);
+    }
+
+    &.rtrb-grid-cols-3 > .rtrb-grid-col, > .rtrb-grid-row.rtrb-grid-cols-3 > .rtrb-grid-col {
+        @include column-width(33.333333333%);
+    }
+
+    &.rtrb-grid-cols-4 > .rtrb-grid-col, > .rtrb-grid-row.rtrb-grid-cols-4 > .rtrb-grid-col {
+        @include column-width(25%);
+    }
+
+    &.rtrb-grid-cols-5 > .rtrb-grid-col, > .rtrb-grid-row.rtrb-grid-cols-5 > .rtrb-grid-col {
+        @include column-width(20%);
+    }
+
+    &.rtrb-grid-cols-6 > .rtrb-grid-col, > .rtrb-grid-row.rtrb-grid-cols-6 > .rtrb-grid-col {
+        @include column-width(16.666666667%);
+    }
+
+    &.rtrb-grid-cols-7 > .rtrb-grid-col, > .rtrb-grid-row.rtrb-grid-cols-7 > .rtrb-grid-col {
+        @include column-width(14.285714286%);
+    }
+
+    &.rtrb-grid-cols-8 > .rtrb-grid-col, > .rtrb-grid-row.rtrb-grid-cols-8 > .rtrb-grid-col {
+        @include column-width(12.5%);
+    }
+
+    &.rtrb-grid-cols-9 > .rtrb-grid-col, > .rtrb-grid-row.rtrb-grid-cols-9 > .rtrb-grid-col {
+        @include column-width(11.111111111%);
+    }
+
+    &.rtrb-grid-cols-10 > .rtrb-grid-col, > .rtrb-grid-row.rtrb-grid-cols-10 > .rtrb-grid-col {
+        @include column-width(10%);
+    }
+
+    &.rtrb-grid-cols-11 > .rtrb-grid-col, > .rtrb-grid-row.rtrb-grid-cols-11 > .rtrb-grid-col {
+        @include column-width(9.090909091%);
+    }
+
+    &.rtrb-grid-cols-12 > .rtrb-grid-col, > .rtrb-grid-row.rtrb-grid-cols-12 > .rtrb-grid-col {
+        @include column-width(8.33333333%);
+    }
+
+    //With gutter
+    &.rtrb-grid-gutter {
+        &.rtrb-grid-cols-1 > .rtrb-grid-col, &.rtrb-grid-cols-1 > .rtrb-grid-row > .rtrb-grid-col {
+            @include column-width-gutter(100%);
+        }
+
+        &.rtrb-grid-cols-2 > .rtrb-grid-col, &.rtrb-grid-cols-2 > .rtrb-grid-row > .rtrb-grid-col {
+            @include column-width-gutter(50%);
+        }
+
+        &.rtrb-grid-cols-3 > .rtrb-grid-col, &.rtrb-grid-cols-3 > .rtrb-grid-row > .rtrb-grid-col {
+            @include column-width-gutter(33.333333333%);
+        }
+
+        &.rtrb-grid-cols-4 > .rtrb-grid-col, &.rtrb-grid-cols-4 > .rtrb-grid-row > .rtrb-grid-col {
+            @include column-width-gutter(25%);
+        }
+
+        &.rtrb-grid-cols-5 > .rtrb-grid-col, &.rtrb-grid-cols-5 > .rtrb-grid-row > .rtrb-grid-col {
+            @include column-width-gutter(20%);
+        }
+
+        &.rtrb-grid-cols-6 > .rtrb-grid-col, &.rtrb-grid-cols-6 > .rtrb-grid-row > .rtrb-grid-col {
+            @include column-width-gutter(16.666666667%);
+        }
+
+        &.rtrb-grid-cols-7 > .rtrb-grid-col, &.rtrb-grid-cols-7 > .rtrb-grid-row > .rtrb-grid-col {
+            @include column-width-gutter(14.285714286%);
+        }
+
+        &.rtrb-grid-cols-8 > .rtrb-grid-col, &.rtrb-grid-cols-8 > .rtrb-grid-row > .rtrb-grid-col {
+            @include column-width-gutter(12.5%);
+        }
+
+        &.rtrb-grid-cols-9 > .rtrb-grid-col, &.rtrb-grid-cols-9 > .rtrb-grid-row > .rtrb-grid-col {
+            @include column-width-gutter(11.111111111%);
+        }
+
+        &.rtrb-grid-cols-10 > .rtrb-grid-col, &.rtrb-grid-cols-10 > .rtrb-grid-row > .rtrb-grid-col {
+            @include column-width-gutter(10%);
+        }
+
+        &.rtrb-grid-cols-11 > .rtrb-grid-col, &.rtrb-grid-cols-11 > .rtrb-grid-row > .rtrb-grid-col {
+            @include column-width-gutter(9.090909091%);
+        }
+
+        &.rtrb-grid-cols-12 > .rtrb-grid-col, &.rtrb-grid-cols-12 > .rtrb-grid-row > .rtrb-grid-col {
+            @include column-width-gutter(8.33333333%);
+        }
+    }
+
+    //Columns can be specified with rtrb-grid-col-width-{1-12} and if so, they take
+    //that many combined box width
+    > .rtrb-grid-col.rtrb-grid-col-width-1, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-1 {
+        @include column-width(8.33333333%);
+    }
+
+    > .rtrb-grid-col.rtrb-grid-col-width-2, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-2 {
+        @include column-width(16.66666666%);
+    }
+
+    > .rtrb-grid-col.rtrb-grid-col-width-3, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-3 {
+        @include column-width(24.99999999%);
+    }
+
+    > .rtrb-grid-col.rtrb-grid-col-width-4, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-4 {
+        @include column-width(33.33333332%);
+    }
+
+    > .rtrb-grid-col.rtrb-grid-col-width-5, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-5 {
+        @include column-width(41.66666665%);
+    }
+
+    > .rtrb-grid-col.rtrb-grid-col-width-6, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-6 {
+        @include column-width(49.99999998%);
+    }
+
+    > .rtrb-grid-col.rtrb-grid-col-width-7, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-7 {
+        @include column-width(58.33333331%);
+    }
+
+    > .rtrb-grid-col.rtrb-grid-col-width-8, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-8 {
+        @include column-width(66.66666664%);
+    }
+
+    > .rtrb-grid-col.rtrb-grid-col-width-9, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-9 {
+        @include column-width(74.99999997%);
+    }
+
+    > .rtrb-grid-col.rtrb-grid-col-width-10, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-10 {
+        @include column-width(83.3333333%);
+    }
+
+    > .rtrb-grid-col.rtrb-grid-col-width-11, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-11 {
+        @include column-width(91.66666663%);
+    }
+
+    > .rtrb-grid-col.rtrb-grid-col-width-12, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-12 {
+        @include column-width(100%);
+    }
+
+    &.rtrb-grid-gutter {
+        > .rtrb-grid-col.rtrb-grid-col-width-1, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-1 {
+            @include column-width-gutter(8.33333333%);
+        }
+
+        > .rtrb-grid-col.rtrb-grid-col-width-2, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-2 {
+            @include column-width-gutter(16.66666666%);
+        }
+
+        > .rtrb-grid-col.rtrb-grid-col-width-3, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-3 {
+            @include column-width-gutter(24.99999999%);
+        }
+
+        > .rtrb-grid-col.rtrb-grid-col-width-4, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-4 {
+            @include column-width-gutter(33.33333332%);
+        }
+
+        > .rtrb-grid-col.rtrb-grid-col-width-5, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-5 {
+            @include column-width-gutter(41.66666665%);
+        }
+
+        > .rtrb-grid-col.rtrb-grid-col-width-6, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-6 {
+            @include column-width-gutter(49.99999998%);
+        }
+
+        > .rtrb-grid-col.rtrb-grid-col-width-7, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-7 {
+            @include column-width-gutter(58.33333331%);
+        }
+
+        > .rtrb-grid-col.rtrb-grid-col-width-8, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-8 {
+            @include column-width-gutter(66.66666664%);
+        }
+
+        > .rtrb-grid-col.rtrb-grid-col-width-9, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-9 {
+            @include column-width-gutter(74.99999997%);
+        }
+
+        > .rtrb-grid-col.rtrb-grid-col-width-10, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-10 {
+            @include column-width-gutter(83.3333333%);
+        }
+
+        > .rtrb-grid-col.rtrb-grid-col-width-11, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-11 {
+            @include column-width-gutter(91.66666663%);
+        }
+
+        > .rtrb-grid-col.rtrb-grid-col-width-12, > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-col-width-12 {
+            @include column-width-gutter(100%);
+        }
+    }
+}

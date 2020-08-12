@@ -1,0 +1,98 @@
+$rtrb-grid-gutter-width: 5px !default;
+.rtrb-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0em;
+    flex: 0 1 auto;
+    // overflow-y: auto;
+    //The row child of a grid, always get 100%.
+    > .rtrb-grid-row {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        // overflow-y: auto;
+    }
+
+    &.rtrb-grid-gutter > .rtrb-grid-col,
+    &.rtrb-grid-gutter > .rtrb-grid-row,
+    &.rtrb-grid-gutter > .rtrb-grid-row > .rtrb-grid-col {
+        margin: $rtrb-grid-gutter-width;
+    }
+
+    //Horizontal alignment
+    &.rtrb-grid-halign-left,
+    &.rtrb-grid-halign-left > .rtrb-grid-row,
+    > .rtrb-grid-row.rtrb-grid-halign-left {
+        justify-content: flex-start;
+    }
+    &.rtrb-grid-halign-center,
+    &.rtrb-grid-halign-center > .rtrb-grid-row,
+    > .rtrb-grid-row.rtrb-grid-halign-center {
+        justify-content: center;
+    }
+    &.rtrb-grid-halign-right,
+    &.rtrb-grid-halign-right > .rtrb-grid-row,
+    > .rtrb-grid-row.rtrb-grid-halign-right {
+        justify-content: flex-end;
+    }
+    &.rtrb-grid-halign-space-around,
+     &.rtrb-grid-halign-space-around > .rtrb-grid-row,
+     > .rtrb-grid-row.rtrb-grid-halign-space-around {
+        justify-content: space-around;
+    }
+    &.rtrb-grid-halign-space-between,
+    &.rtrb-grid-halign-space-between > .rtrb-grid-row,
+    > .rtrb-grid-row.rtrb-grid-halign-space-between {
+        justify-content: space-between;
+    }
+
+    //Vertical Alignment
+    &.rtrb-grid-valign-top,
+    > .rtrb-grid-row.rtrb-grid-valign-top {
+        align-items: flex-start;
+    }
+    &.rtrb-grid-valign-middle,
+    > .rtrb-grid-row.rtrb-grid-valign-middle {
+        align-items: center;
+    }
+    &.rtrb-grid-valign-bottom,
+    > .rtrb-grid-row.rtrb-grid-valign-bottom {
+        align-items: flex-end;
+    }
+    &.rtrb-grid-valign-stretch,
+    > .rtrb-grid-row.rtrb-grid-valign-stretch {
+        align-items: stretch;
+    }
+
+    //Bump a column to right
+    > .rtrb-grid-col.rtrb-grid-bump-right,
+    > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-bump-right {
+        margin-left: auto;
+    }
+
+    > .rtrb-grid-col.rtrb-grid-bump-left,
+    > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-bump-left {
+        margin-right: auto;
+    }
+
+    > .rtrb-grid-col.rtrb-grid-bump-top,
+    > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-bump-top {
+        margin-bottom: auto;
+    }
+
+    > .rtrb-grid-col.rtrb-grid-bump-bottom,
+    > .rtrb-grid-row > .rtrb-grid-col.rtrb-grid-bump-bottom {
+        margin-top: auto;
+    }
+
+    //Equal width grid
+    &.rtrb-grid-equal-width > .rtrb-grid-col,
+    > .rtrb-grid-row.rtrb-grid-equal-width > .rtrb-grid-col {
+        flex-grow: 1;
+        width: 100%;
+    }
+}
+
+@import './_GridStyles__grid-level-columns.scss';

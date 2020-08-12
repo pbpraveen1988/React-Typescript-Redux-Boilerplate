@@ -12,7 +12,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 module.exports = {
     entry: {
         'bundle': "./src/index.tsx",
-        'blueprint': "@blueprintjs/core/lib/css/blueprint.css",
+        'blueprint': ["@blueprintjs/core/lib/css/blueprint.css", "@blueprintjs/icons/lib/css/blueprint-icons.css"],
         'normalize': "normalize.css/normalize.css",
     },
     output: {
@@ -49,8 +49,18 @@ module.exports = {
             { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
 
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
-
+            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    // Creates `style` nodes from JS strings
+                    'style-loader',
+                    // Translates CSS into CommonJS
+                    'css-loader',
+                    // Compiles Sass to CSS
+                    'sass-loader',
+                ],
+            },
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']

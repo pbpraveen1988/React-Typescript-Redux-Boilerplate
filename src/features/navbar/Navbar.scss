@@ -1,0 +1,40 @@
+$secondary-nav-color : #c7e0f4;
+
+
+.primary-nav {
+    color: white;
+    background-color: black !important;
+}
+
+.unread-mail-count {
+    background-color: blue;
+    color: white;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    top: 7px;
+    right: 12px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.secondary-nav {
+    outline: 1px solid silver;
+    display: flex;
+    font-size: 14px;
+    background-color: $secondary-nav-color !important;
+    padding: 0px !important;
+    input.bp3-input {
+        background: $secondary-nav-color;
+    }
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+.full-height {
+    height: 100% !important;
+}
